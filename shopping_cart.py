@@ -45,7 +45,9 @@ while True:
         break
     else:
         selected_ids.append(selected_id)
-# INFO DISPLAY / OUTPUT
+
+
+# SHOPPING CART OUTPUTS
 print("------------------------------------")
 print("CLAIRE'S GROCERY STORE")
 print("FIND US AT WWW.CCGROCERIES.COM | 888-888-8888")
