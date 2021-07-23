@@ -36,16 +36,20 @@ def to_usd(my_price):
 
 # SHOPPING CART INPUTS
 
-while True:
-    selected_id = input("Please select a product ID (1-20), type DONE when you have finished entering products:")
-    if selected_id == "DONE":
-        break
-product_ids = [selected_id]
-print("now time to generate a receipt")
+#while True:
+    #selected_id = input("Please select a product ID (1-20), type DONE when you have finished entering products:")
+    #if selected_id == "DONE":
+        #break
+#product_ids = [selected_id]
+#print("now time to generate a receipt")
 
+selected_id = input("Please select a product ID (1-20), type DONE when you have finished entering products:")
+matching_products = [item for item in products if str(item["id"]) == str(selected_id)]
+matching_product = matching_products[0]
+print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
 
 #SHOPPING CART OUTPUTS
-products = [...] #<--- that long list of product dictionaries provided above
+#products = [...] #<--- that long list of product dictionaries provided above
 
 #
 # some commented-out loop
@@ -56,8 +60,8 @@ products = [...] #<--- that long list of product dictionaries provided above
 # ... (yours will actually be some working python code)
 #
 
-product_ids = [1, 8, 6, 16, 6] # temporary list of valid ids for testing purposes
+#product_ids = [1, 8, 6, 16, 6] # temporary list of valid ids for testing purposes
 
-print("SHOPPING CART ITEM IDENTIFIERS INCLUDE:", product_ids)
+#print("SHOPPING CART ITEM IDENTIFIERS INCLUDE:", product_ids)
 
 #CHECKPOINT 2 - matching w/ list comprehension
