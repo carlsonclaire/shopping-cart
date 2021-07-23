@@ -48,15 +48,34 @@ while True:
 # INFO DISPLAY / OUTPUT
 print("------------------------------------")
 print("CLAIRE'S GROCERY STORE")
-print("WWW.CCGROCERIES.COM | 888-888-8888")
+print("FIND US AT WWW.CCGROCERIES.COM | 888-888-8888")
+print("------------------------------------")
+import datetime
+now = datetime.datetime.now()
+print ("CHECKOUT ON",(now.strftime("%Y-%m-%d %H:%M")))
 print("------------------------------------")
 print("YOU PURCHASED:")
 for selected_id in selected_ids:
     matching_products = [item for item in products if str(item["id"]) == str(selected_id)]
     matching_product = matching_products[0]
-    total_price = total_price + matching_product["price"]
-    print("+: " + matching_product["name"] + " " + str(matching_product["price"]))
+    total_price = (total_price + matching_product["price"])
+    print("+ " + matching_product["name"] + " " + str(matching_product["price"]))
 print("------------------------------------")
-print("TOTAL PRICE: " + str(total_price)) #FORMAT AS USD
+print("SUBTOTAL: ")
+print(str(to_usd(total_price)))
+print("------------------------------------")
+Taxes = total_price * .0875
+print("NEW YORK SALES TAX @ 8.75%:")
+print(str(to_usd(Taxes)))
+print("------------------------------------")
+Total = Taxes + total_price
+print("TOTAL:")
+print(str(to_usd(Total)))
 print("------------------------------------")
 print("THANKS FOR SHOPPING AT CLAIRE'S, SEE YOU NEXT TIME!")
+
+
+# Date/time source
+# https://www.w3resource.com/python-exercises/python-basic-exercise-3.php
+# Multiplication source
+# https://pythonguides.com/multiply-in-python/#:~:text=In%20python%2C%20to%20multiply%20number,%E2%80%9D%20*%20%E2%80%9D%20to%20multiply%20number.&text=After%20writing%20the%20above%20code,used%20to%20multiply%20the%20number.
