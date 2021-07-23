@@ -34,8 +34,30 @@ def to_usd(my_price):
     """
     return f"${my_price:,.2f}" #> $12,000.71
 
+# SHOPPING CART INPUTS
+
+while True:
+    selected_id = input("Please select a product ID (1-20), type DONE when you have finished entering products:")
+    if selected_id == "DONE":
+        break
+product_ids = [selected_id]
+print("now time to generate a receipt")
 
 
-    # TODO: write some Python code here to produce the desired output
+#SHOPPING CART OUTPUTS
+products = [...] #<--- that long list of product dictionaries provided above
 
-print(products)
+#
+# some commented-out loop
+# ... representing the result of the first checkpoint (if you did it)
+# ... which accepts user inputs
+# ... and prints the results
+# ... and which we are temporarily ignoring
+# ... (yours will actually be some working python code)
+#
+
+product_ids = [1, 8, 6, 16, 6] # temporary list of valid ids for testing purposes
+
+print("SHOPPING CART ITEM IDENTIFIERS INCLUDE:", product_ids)
+
+#CHECKPOINT 2 - matching w/ list comprehension
