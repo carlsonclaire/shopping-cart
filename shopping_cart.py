@@ -37,16 +37,26 @@ def to_usd(my_price):
 # SHOPPING CART INPUTS
 
 total_price = 0
+selected_ids = []
 
 while True:
     selected_id = input("Please select a product ID (1-20), type DONE when you have finished entering products:")
     if selected_id == "DONE":
         break
     else:
-        matching_products = [item for item in products if str(item["id"]) == str(selected_id)]
-        matching_product = matching_products[0]
-        total_price = total_price + matching_product["price"]
-        print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
-
+        selected_ids.append(selected_id)
 # INFO DISPLAY / OUTPUT
-print("TOTAL PRICE: " + str(total_price))
+print("------------------------------------")
+print("CLAIRE'S GROCERY STORE")
+print("WWW.CCGROCERIES.COM | 888-888-8888")
+print("------------------------------------")
+print("YOU PURCHASED:")
+for selected_id in selected_ids:
+    matching_products = [item for item in products if str(item["id"]) == str(selected_id)]
+    matching_product = matching_products[0]
+    total_price = total_price + matching_product["price"]
+    print("+: " + matching_product["name"] + " " + str(matching_product["price"]))
+print("------------------------------------")
+print("TOTAL PRICE: " + str(total_price)) #FORMAT AS USD
+print("------------------------------------")
+print("THANKS FOR SHOPPING AT CLAIRE'S, SEE YOU NEXT TIME!")
