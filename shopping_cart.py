@@ -54,7 +54,7 @@ import datetime
 now = datetime.datetime.now()
 print ("CHECKOUT ON",(now.strftime("%Y-%m-%d %H:%M")))
 print("------------------------------------")
-print("YOU PURCHASED:")
+print("YOUR PURCHASE:")
 for selected_id in selected_ids:
     matching_products = [item for item in products if str(item["id"]) == str(selected_id)]
     matching_product = matching_products[0]
