@@ -40,13 +40,13 @@ total_price = 0
 selected_ids = []
 
 while True:
-    selected_id = input("Please enter a product ID (1-20), type DONE when you have finished entering products:")
-    if selected_id == "DONE":
+    selected_id = input("Please enter a product ID (1-20), type in the word 'done' when you have finished entering products:")
+    if selected_id == "done":
         break
     elif selected_id == ("1") or selected_id == ("2") or selected_id == ("3") or selected_id == ("4") or selected_id == ("5") or selected_id == ("6") or selected_id == ("7") or selected_id == ("8") or selected_id == ("9") or selected_id == ("10") or selected_id == ("11") or selected_id == ("12") or selected_id == ("13") or selected_id == ("14") or selected_id == ("15") or selected_id == ("16") or selected_id == ("17") or selected_id == ("18") or selected_id == ("19") or selected_id == ("20"):
         selected_ids.append(selected_id)
     else:
-      print("Oops, invalid product ID, please enter DONE if complete or a product ID 1-20.")
+      print("Oops, invalid product ID, please type 'done' if complete or a product ID 1-20.")
 
 
 # SHOPPING CART OUTPUTS
@@ -77,7 +77,6 @@ print("TOTAL:")
 print(str(to_usd(Total)))
 print("------------------------------------")
 print("THANKS FOR SHOPPING AT CLAIRE'S, SEE YOU NEXT TIME!")
-
 
 # Date/time source
 # https://www.w3resource.com/python-exercises/python-basic-exercise-3.php
